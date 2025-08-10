@@ -207,7 +207,7 @@ const UsersSection = () => {
                 <TableRow>
                   <TableHead>User</TableHead>
                   <TableHead className="hidden md:table-cell">Contact</TableHead>
-                  <TableHead >Company</TableHead>
+                  <TableHead className="hidden sm:table-cell">Company</TableHead>
                   <TableHead className="hidden sm:table-cell">Location</TableHead>
                   <TableHead className="hidden lg:table-cell">Website</TableHead>
                 </TableRow>
