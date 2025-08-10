@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AppSideBar from "./components/AppSideBar";
+import { Dashboard } from "./components/Dashboard";
+import { SidebarProvider } from "./components/sidebar/SidebarProvider";
 
 function App() {
+  const [activeSession, setActiveSession] = useState("overview");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SidebarProvider defaultOpen={true}>
+      <div className="flex min-h-screen w-full">
+        <AppSideBar
+          activeSection={activeSession}
+          setActiveSection={setActiveSession}
+        />
+        <main className="flex-1 overflow-hidden md:ml-[16rem]">
+          <Dashboard activeSection={activeSession} />
+        </main>
+      </div>
+    </SidebarProvider>
   );
 }
 
