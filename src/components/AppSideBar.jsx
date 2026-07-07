@@ -9,7 +9,6 @@ import SidebarMenu from "./sidebar/SidebarMenu";
 import SidebarMenuButton from "./sidebar/SidebarMenuButton";
 import SidebarMenuItem from "./sidebar/SidebarMenuItem";
 import { useSidebar } from "./sidebar/SidebarProvider";
-import { SidebarTrigger } from "./sidebar/SidebarTrigger";
 
 const menuItems = [
   { title: "Overview", icon: Home, id: "overview" },

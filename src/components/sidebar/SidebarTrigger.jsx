@@ -1,12 +1,10 @@
-import { ChevronLeft, ChevronRight, PanelLeftClose } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import React from "react";
 import Button from "../ui/Button";
 import { useSidebar } from "./SidebarProvider";
 
 export const SidebarTrigger = React.forwardRef(({ className = "", onClick, ...props }, ref) => {
   const { toggleSidebar, state } = useSidebar();
-  const isCollapsed = state === "collapsed";
-
   return (
     <Button
   ref={ref}
