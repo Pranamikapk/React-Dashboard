@@ -70,8 +70,11 @@
     border-color: hsl(var(--border));
   }
   body {
-    background-color: hsl(var(--background)); 
-    color: hsl(var(--foreground));        
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 24%),
+      linear-gradient(135deg, #fdfeff13 0%, #f7f9fc 45%, #f5f7fb 100%);
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -130,7 +133,6 @@
   animation: spin 1s linear infinite;
 }
 
-/* Chart container improvements */
 .recharts-wrapper {
   font-family: inherit;
 }

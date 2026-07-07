@@ -32,7 +32,7 @@ const Select = ({ children, value, onValueChange }) => {
 }
 
 const SelectTrigger = ({ children, className = "", ...props }) => {
-  const { isOpen, setIsOpen, selectedValue } = useContext(SelectContext)
+  const { isOpen, setIsOpen } = useContext(SelectContext)
   
   return (
     <button 
